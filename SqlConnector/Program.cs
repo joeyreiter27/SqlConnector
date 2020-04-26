@@ -9,13 +9,17 @@ namespace SqlConnector
         {
 
             // text within quotes taken from connectionstrings.com
-            using(var sqlConnection = new SqlConnection("Server=.;Database=test;User Id=testuser;Password=Myname02!;"))
+            using(var sqlConnection = new SqlConnection("Server=.;Database=Tseries Controller Database;User Id=sa;Password=Myname02!;"))
             {
                 //opens the database connection
                 sqlConnection.Open();
 
+
+
+
                 //Inserts a new row of values into all specified columns
                 // the Guid functions are used to give the value a generated unique value
+
                 using (var command = new SqlCommand($"INSERT INTO  dbo.Users (id, Username, FirstName, LastName, IsEnabled, CreatedDateUtc) VALUES ('{Guid.NewGuid().ToString("N")}', 'Username1', 'My first name', 'My last name', 1,'12/12/2020 11:30:30 AM +00:00' )", sqlConnection))
                 {
                     // Checks to ensure the insert function was executed... result = 1 means it executed
