@@ -35,7 +35,7 @@ namespace SqlConnector
                 using (var command = new SqlCommand("SELECT * FROM dbo.PartNumbers$", sqlConnection))
                 {
                     //assigns the values of what is read in each cell to the variable reader 
-                    // there are multiple other execute options that will give you different options for what values youll return from the table
+                    // there are multiple other Execute options that will give you different options for what values youll return from the table
                     using (var reader = command.ExecuteReader())
                     {
                         //creates while loop that reads and assigns each row of the table
@@ -43,7 +43,7 @@ namespace SqlConnector
                         {
                             // writes the content of the table in a logical text statement
                             // 
-                            Console.WriteLine($"ABB New Part Number: { reader["ABB New Part Number"]}, SqD New Part Number: {reader["SqD New Part Number"]}, MatchCode: {reader["MatchCode"]},Model: {reader["Model"]}");
+                            Console.WriteLine($"ABB New Part Number: { reader["ABB New Part Number"]}, SqD New Part Number: {reader["SqD New Part Number"]}, MatchCode: {reader["MatchCode"]},Model: {reader["Model"]}, ");
                         }
                     }
 
