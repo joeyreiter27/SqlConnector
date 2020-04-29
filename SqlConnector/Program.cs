@@ -42,7 +42,7 @@ namespace SqlConnector
                         while (reader.Read())
                         {
                             // writes the content of the table in a logical text statement
-                            // 
+                            
                             Console.WriteLine($"ABB New Part Number: { reader["ABB New Part Number"]}, SqD New Part Number: {reader["SqD New Part Number"]}, MatchCode: {reader["MatchCode"]},Model: {reader["Model"]}, ");
                         }
                     }
